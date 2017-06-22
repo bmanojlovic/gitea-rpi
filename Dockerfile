@@ -39,7 +39,7 @@ ENV GODEBUG=netdns=go
 RUN svn export https://github.com/go-gitea/gitea/trunk/docker ./ --force
 
 ### GET GITEA GO FILE FOR RPI
-RUN mkdir -p /app/gitea && wget -O https://github.com/go-gitea/gitea/releases/download/v1.1.2/gitea-1.1.2-linux-arm-7
+RUN mkdir -p /app/gitea && wget -O /app/gitea/gitea https://github.com/go-gitea/gitea/releases/download/v$VERSION/gitea-$VERSION-linux-arm-7
 
 RUN [ "cross-build-end" ]
 
