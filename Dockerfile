@@ -1,4 +1,3 @@
-#FROM multiarch/alpine:armhf-v3.5
 FROM resin/armhf-alpine:latest
 MAINTAINER Patrick Eichmann <phreakazoid@phreakazoid.com>
 
@@ -18,6 +17,7 @@ RUN apk --no-cache add \
     linux-pam \
     s6 \
     curl \
+    wget \
     openssh \
     tzdata
 RUN addgroup \
