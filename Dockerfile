@@ -1,4 +1,5 @@
-FROM multiarch/alpine:armhf-v3.5
+#FROM multiarch/alpine:armhf-v3.5
+FROM resin/armhf-alpine:latest
 MAINTAINER Patrick Eichmann <phreakazoid@phreakazoid.com>
 
 ## SET NEWEST VERSION & DOWNLOAD URL
