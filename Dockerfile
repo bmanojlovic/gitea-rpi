@@ -1,11 +1,11 @@
 FROM resin/armhf-alpine:latest
 MAINTAINER Patrick Eichmann <phreakazoid@phreakazoid.com>
 
+RUN [ "cross-build-start" ]
+
 ## SET NEWEST VERSION & DOWNLOAD URL
 ENV VERSION 1.1.2
 ENV DOWNLOAD_URL https://github.com/go-gitea/gitea/releases/download/v$VERSION/gitea-$VERSION-linux-arm-7
-
-RUN [ "cross-build-start" ]
 
 RUN apk --no-cache add \
     su-exec \
@@ -40,7 +40,7 @@ ENV GODEBUG=netdns=go
 RUN svn export https://github.com/go-gitea/gitea/trunk/docker ./ --force
 
 ### GET GITEA GO FILE FOR RPI
-RUN wget -qO- $DOWNLOAD_URL | -C /app/gitea/gitea
+RUN mkdir -p /app/gitea && wget -O $DOWNLOAD_URL
 
 RUN [ "cross-build-end" ]
 
