@@ -41,3 +41,4 @@ $ docker run -d \
 ```
 ## Resources
 * [Docker Hub](https://hub.docker.com/r/phreakazoid/gitea-rpi/)
+* [Github](https://github.com/phreakazoid/gitea-rpi/)
