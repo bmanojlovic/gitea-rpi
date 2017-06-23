@@ -1,6 +1,16 @@
 FROM resin/armhf-alpine:latest
 MAINTAINER Patrick Eichmann <phreakazoid@phreakazoid.com>
 
+ARG BUILD_DATE
+ARG VCS_REF
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.docker.dockerfile="/Dockerfile" \
+      org.label-schema.name="gitea-rpi" \
+      org.label-schema.url="https://github.com/phreakazoid/gitea-rpi \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/phreakazoid/gitea-rpi.git" \
+      org.label-schema.vcs-type="Git"
+
 RUN [ "cross-build-start" ]
 
 ## SET NEWEST VERSION & DOWNLOAD URL
