@@ -1,20 +1,22 @@
 FROM resin/armhf-alpine:latest
-MAINTAINER Patrick Eichmann <phreakazoid@phreakazoid.com>
+# Original maintainer
+#MAINTAINER Patrick Eichmann <phreakazoid@phreakazoid.com>
+MAINTAINER Boris Manojlovic <boris@steki.net>
 
 ARG BUILD_DATE
 ARG VCS_REF
 LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.docker.dockerfile="/Dockerfile" \
       org.label-schema.name="gitea-rpi" \
-      org.label-schema.url="https://github.com/phreakazoid/gitea-rpi \
+      org.label-schema.url="https://github.com/bmanojlovic/gitea-rpi" \
       org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/phreakazoid/gitea-rpi.git" \
+      org.label-schema.vcs-url="https://github.com/bmanojlovic/gitea-rpi.git" \
       org.label-schema.vcs-type="Git"
 
 RUN [ "cross-build-start" ]
 
 ## SET NEWEST VERSION & DOWNLOAD URL
-ENV VERSION 1.1.2
+ENV VERSION 1.3.2
 
 RUN apk --no-cache add \
     su-exec \
