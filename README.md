@@ -1,5 +1,5 @@
 # gitea-rpi
-[![](https://images.microbadger.com/badges/image/phreakazoid/gitea-rpi:latest.svg)](https://microbadger.com/images/phreakazoid/gitea-rpi:latest "Get your own image badge on microbadger.com")![](https://img.shields.io/docker/pulls/phreakazoid/gitea-rpi.svg)
+[![](https://images.microbadger.com/badges/image/bmanojlovic/gitea-rpi:latest.svg)](https://microbadger.com/images/bmanojlovic/gitea-rpi:latest "Get your own image badge on microbadger.com")![](https://img.shields.io/docker/pulls/bmanojlovic/gitea-rpi.svg)
 
 This Dockerfile is for Automated Builds on Docker Hub.
 
@@ -11,7 +11,7 @@ $ docker run -d \
   -p 22:22 \
   -p 3000:3000 \
   -v /opt/gitea:/data \
-  phreakazoid/gitea-rpi:latest
+  bmanojlovic/gitea-rpi:latest
 ```
 ## Usage with linked Database
 ```
@@ -22,7 +22,7 @@ $ docker run -d \
   -p 22:22 \
   -p 3000:3000 \
   -v /opt/gitea:/data \
-  phreakazoid/gitea-rpi:latest
+  bmanojlovic/gitea-rpi:latest
 ```
 ## Usage with custom options (for Example NGINX Proxy and Letsencrypt)
 ```
@@ -37,8 +37,8 @@ $ docker run -d \
   -p 22:22 \
   -p 3000:3000 \
   -v /opt/gitea:/data \
-  phreakazoid/gitea-rpi:latest
+  bmanojlovic/gitea-rpi:latest
 ```
 ## Resources
-* [Docker Hub](https://hub.docker.com/r/phreakazoid/gitea-rpi/)
-* [Github](https://github.com/phreakazoid/gitea-rpi/)
+* [Docker Hub](https://hub.docker.com/r/bmanojlovic/gitea-rpi/)
+* [Github](https://github.com/bmanojlovic/gitea-rpi/)
