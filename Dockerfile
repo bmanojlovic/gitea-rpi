@@ -48,7 +48,7 @@ ENV GITEA_CUSTOM /data/gitea
 ENV GODEBUG=netdns=go
 
 ## GET DOCKER FILES
-RUN svn export https://github.com/go-gitea/gitea/trunk/docker ./ --force
+RUN svn export https://github.com/go-gitea/gitea/trunk/docker/root ./ --force
 
 ### GET GITEA GO FILE FOR RPI
 RUN mkdir -p /app/gitea && \
