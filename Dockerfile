@@ -52,7 +52,7 @@ RUN svn export https://github.com/go-gitea/gitea/trunk/docker ./ --force
 
 ### GET GITEA GO FILE FOR RPI
 RUN mkdir -p /app/gitea && \
-    wget -O /app/gitea/gitea https://github.com/go-gitea/gitea/releases/download/v$VERSION/gitea-$VERSION-linux-arm-7 && \
+    wget -O /app/gitea/gitea https://github.com/go-gitea/gitea/releases/download/v$VERSION/gitea-$VERSION-linux-arm-6 && \
     chmod 0755 /app/gitea/gitea
 
 RUN [ "cross-build-end" ]
