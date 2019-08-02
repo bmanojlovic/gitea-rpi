@@ -19,6 +19,7 @@ RUN [ "cross-build-start" ]
 ENV VERSION 1.9.0
 
 RUN apk --no-cache add \
+    gettext \
     su-exec \
     ca-certificates \
     sqlite \
