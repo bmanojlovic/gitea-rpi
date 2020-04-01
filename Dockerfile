@@ -16,7 +16,11 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 RUN [ "cross-build-start" ]
 
 ## SET NEWEST VERSION & DOWNLOAD URL
+<<<<<<< HEAD
 ENV VERSION 1.9.6
+=======
+ENV VERSION 1.9.6
+>>>>>>> 7debff6e3314edb9655b8772f66fe8d7cb4e1764
 
 RUN apk --no-cache add \
     gettext \
